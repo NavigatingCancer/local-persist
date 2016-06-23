@@ -1,22 +1,24 @@
 language: go
+group: edge
 sudo: required
 services:
-- docker
+ - docker
 go:
-- 1.5
+ - 1.5
 before_install:
-- sudo apt-get update
-- sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
+ - sudo apt-get update
+ - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
 install:
-- go get -v -d
+ - go get -v -d
 before_script:
-- docker version
-- make binary-linux-amd64
-- chmod +x bin/linux/amd64/local-persist
-- sudo ./bin/linux/amd64/local-persist &
+ - docker version
+ - rvm use
+ - make binary-linux-amd64
+ - chmod +x bin/linux/amd64/local-persist
+ -  sudo ./bin/linux/amd64/local-persist &
 script:
-- "./scripts/integration.sh"
-- make test
+ - "./scripts/integration.sh"
+ - make test
 deploy:
   provider: releases
   api_key:

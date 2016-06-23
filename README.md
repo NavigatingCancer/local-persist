@@ -3,7 +3,7 @@
 
 ### A fork for use by NavigatingCancer
 
-[![Build Status](https://travis-ci.org/CWSpear/local-persist.svg?branch=master)](https://travis-ci.org/CWSpear/local-persist)
+[![Build Status](https://travis-ci.org/NavigatingCancer/local-persist.svg?branch=master)](https://travis-ci.org/NavigatingCancer/local-persist)
 
 
 Create named local volumes that persist in the location(s) you want!

@@ -23,6 +23,10 @@ deploy:
   provider: releases
   api_key:
     secure: VdSJG5ZyRAWiHYm5aNpeoqUuyAbWJN/jrcTHWq2ve+/vRfjh9ba2mpzUdC/risUEkb3fcLcVb5Vsyg1zWhOUXi18xQBMeZC6mNZrY5PoaQAzSPJLdhASR7uu2XLhgDRlsZcHzo7/BnTxxsDBXrBeYvZOTANkmDMJvx6kgxpg/VTIUmFnhoBsxUD4f7icXvzBiKXHjR261r/kKMG6reOUC006gtM8f/FObZl/QW6E3FCJTFB51tba3h/ec0WJ5qkCsOv7Yy0MIcMBo5KkZpADPfynHLZzEZHAekRag9mwY9JB+NuBNG195mW+Q33WCKmyJ90L0+l+mEFmBAbhWanjFgT17HSU9gserGDdlVR/aOzHIWtQKfJ6FnhYGtrZ1pc7cujwh23krk9YF5w/oGQeVANyhJOfDHrNYs184sIvl7H/atRUsAmfrWAhqsRYwrqj/0P3Am64gYAm3QFBJ9kTfx9XllbafESLiEwAqn+kl/mOH1aYSWRbsStgaVl5cc9pqv6/LxXDjNlUgk+v7u/Ioh1p3k+rnKm9ZaaY/8OA9O0tSneBeL9S/iZA9aLfT5le9AUFWiAC1EBO/hCB2XNbYz39hx5dfSzPkr9thlkzs9pknX/rSVhqCi4++ayBbdhVrV46tjLcqyzhHs7WxOuNV90qEx7/rHWsdHY8Md99wT0=
-  file: local-persist
+  file: 
+    - bin/linux/amd64/local-persist
+    - local-persist
+    - local-persist-linux-amd64
+  skip_cleanup: true
   on:
     repo: NavigatingCancer/local-persist

@@ -13,9 +13,9 @@ install:
 before_script:
  - docker version
  - rvm use
- - make binary-linux-amd64
  - pwd
  - ls -lafR
+ - make binary-linux-amd64
  - cp bin/linux/amd64/local-persist ./local-persist-linux-amd64
  - chmod +x bin/linux/amd64/local-persist
  -  sudo ./bin/linux/amd64/local-persist &
